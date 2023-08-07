@@ -9,4 +9,7 @@
     <description>Root Project</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>ShopMeCommon</module>
+    </modules>
 </project>

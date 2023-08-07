@@ -11,5 +11,6 @@
 
     <modules>
         <module>ShopMeCommon</module>
+        <module>ShopMeWebParent</module>
     </modules>
 </project>

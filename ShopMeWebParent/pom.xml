@@ -17,6 +17,7 @@
 
     <modules>
         <module>ShopMeBackend</module>
+        <module>ShopMeFrontend</module>
     </modules>
 
     <properties>

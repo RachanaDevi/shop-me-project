@@ -3,7 +3,6 @@ package com.shopme.shopmecommon.entity;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -57,23 +56,27 @@ public class User {
         this.roles.add(role);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return enabled == user.enabled &&
-                Objects.equals(id, user.id) &&
-                Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(photos, user.photos) &&
-                Objects.equals(roles, user.roles);
+    public void updateEmailId(String email) {
+        this.email = email;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, email, password, firstName, lastName, photos, enabled, roles);
+    public void updateEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public boolean enabled() {
+        return enabled;
+    }
+
+    public String emailId() {
+        return email;
+    }
+
+    public void removeRole(Role role) {
+        this.roles.remove(role);
+    }
+
+    public Set<Role> roles() {
+        return roles;
     }
 }

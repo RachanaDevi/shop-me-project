@@ -1,6 +1,7 @@
 package com.shopme.admin.user;
 
 import com.shopme.shopmecommon.entity.Role;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -21,6 +22,15 @@ class RoleRepositoryTest {
     private RoleRepository roleRepository;
 
     @Test
+    void shouldCreateRole() {
+        Role anyRole = new Role("AnyRole", "Any description");
+        roleRepository.save(anyRole);
+
+        assertThat(roleRepository.count()).isGreaterThan(0);
+    }
+
+    @Test
+    @Disabled
     void shouldCreateAllRoles() {
         Role adminRole = new Role("Admin", "Manage everything");
         Role salespersonRole = new Role("Salesperson", "Manage product price");

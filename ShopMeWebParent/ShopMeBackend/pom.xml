@@ -16,6 +16,15 @@
         <java.version>20</java.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.shopme</groupId>
+            <artifactId>ShopMeCommon</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

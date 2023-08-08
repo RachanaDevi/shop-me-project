@@ -1,5 +1,6 @@
-package com.shopme.admin.user;
+package com.shopme.admin.user.repository;
 
+import com.shopme.admin.user.repository.RoleRepository;
 import com.shopme.shopmecommon.entity.Role;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

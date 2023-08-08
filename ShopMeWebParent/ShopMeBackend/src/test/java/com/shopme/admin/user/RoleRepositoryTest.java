@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.annotation.Rollback;
+
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,10 +21,15 @@ class RoleRepositoryTest {
     private RoleRepository roleRepository;
 
     @Test
-    void shouldCreateRole() {
-        Role role = new Role("Admin", "Manage everything");
+    void shouldCreateAllRoles() {
+        Role adminRole = new Role("Admin", "Manage everything");
+        Role salespersonRole = new Role("Salesperson", "Manage product price");
+        Role editorRole = new Role("Editor",
+                "Manage categories, brands, prodcuts, articles and menus");
+        Role shipperRole = new Role("Shipper", "View products, orders and update order status");
+        Role assistantRole = new Role("Assistant", "Manage questions and reviews");
 
-        roleRepository.save(role);
+        roleRepository.saveAll(List.of(adminRole, salespersonRole, editorRole, shipperRole, assistantRole));
 
         assertThat(roleRepository.count()).isGreaterThan(0);
     }

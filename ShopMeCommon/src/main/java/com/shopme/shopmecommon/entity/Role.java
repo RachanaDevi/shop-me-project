@@ -37,9 +37,19 @@ public class Role {
         Role role = (Role) o;
         return Objects.equals(id, role.id);
     }
+    /* new statment */
+    /* new statment */
+    /* new statment */
+    /* new statment */
+    /* new statment */
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+    /* new statment */
+    /* new statment */
+    /* new statment */
+    /* new statment */
+    /* new statment */
 }

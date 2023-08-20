@@ -79,8 +79,8 @@ class UserRepositoryTest {
         User updatedUser = testEntityManager.find(User.class, 1);
 
         Assertions.assertAll(
-                () -> assertThat(updatedUser.emailId()).isEqualTo(newEmail),
-                () -> assertThat(updatedUser.enabled()).isTrue()
+                () -> assertThat(updatedUser.getEmail()).isEqualTo(newEmail),
+                () -> assertThat(updatedUser.isEnabled()).isTrue()
         );
     }
 

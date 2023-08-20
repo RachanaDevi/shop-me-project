@@ -68,8 +68,36 @@ public class User {
         return enabled;
     }
 
-    public String emailId() {
+    public Integer getId() {
+        return id;
+    }
+
+    public String getEmail() {
         return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPhotos() {
+        return photos;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
     }
 
     public void removeRole(Role role) {

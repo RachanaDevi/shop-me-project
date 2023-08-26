@@ -33,6 +33,7 @@ public class UserController {
     public String signupNewUser(Model model) {
         List<Role> listRoles = userService.listRoles();
         User user = new User();
+        user.setEnabled(true);
         model.addAttribute("user", user);
         model.addAttribute("listRoles", listRoles);
         return "user_form";

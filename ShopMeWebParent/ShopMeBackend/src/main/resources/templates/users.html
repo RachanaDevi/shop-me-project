@@ -43,6 +43,9 @@
         <h1>Manage users</h1>
         <a th:href="@{/signup}">Create new User</a>
     </div>
+    <div th:if="${message != null}" class="alert alert-success text-center">
+        [[${message}]]
+    </div>
     <div>
         <table class="table table-bordered table-striped table-responsive-xl">
             <thead class="thead-dark">

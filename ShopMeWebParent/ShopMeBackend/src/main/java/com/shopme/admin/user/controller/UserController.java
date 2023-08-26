@@ -26,4 +26,9 @@ public class UserController {
 
         return "users";
     }
+
+    @GetMapping("/signup")
+    public String signupNewUser() {
+        return "user_form";
+    }
 }

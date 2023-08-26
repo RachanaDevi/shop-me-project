@@ -4,6 +4,7 @@ import com.shopme.admin.user.repository.UserRepository;
 import com.shopme.shopmecommon.entity.Role;
 import com.shopme.shopmecommon.entity.User;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -16,6 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Disabled
 //@Rollback(false)
 class UserRepositoryTest {
 

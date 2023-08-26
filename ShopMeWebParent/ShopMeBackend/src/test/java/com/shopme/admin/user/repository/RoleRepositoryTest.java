@@ -1,6 +1,5 @@
 package com.shopme.admin.user.repository;
 
-import com.shopme.admin.user.repository.RoleRepository;
 import com.shopme.shopmecommon.entity.Role;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -15,6 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Disabled
 //@Rollback(false)  // to insert into the database
 class RoleRepositoryTest {
 

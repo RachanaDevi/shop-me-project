@@ -1,6 +1,7 @@
 package com.shopme.admin.user.controller;
 
 import com.shopme.admin.user.service.UserService;
+import com.shopme.shopmecommon.entity.Role;
 import com.shopme.shopmecommon.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,8 +31,10 @@ public class UserController {
 
     @GetMapping("/signup")
     public String signupNewUser(Model model) {
+        List<Role> listRoles = userService.listRoles();
         User user = new User();
         model.addAttribute("user", user);
+        model.addAttribute("listRoles", listRoles);
         return "user_form";
     }
 
